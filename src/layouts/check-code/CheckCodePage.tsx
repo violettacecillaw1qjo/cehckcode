@@ -3,9 +3,6 @@ import { Fragment, useState } from 'react';
 
 import { FuncCommonChangeKeyItem } from '@/types/common.type';
 
-import { ApiCodeCheck } from '@/services/check-code.api';
-
-import { apiSimpleRequestor } from '@/utils/api.util';
 import { arrayNotEmpty } from '@/utils/common.util';
 
 import CButton from '@/components/common/button/CButton';
@@ -63,23 +60,15 @@ const CheckCodePage = () => {
 
             if (!token || !arrayNotEmpty(contents)) return;
 
-            const promiseArr = contents.map(async (item) => {
-                const response = await apiSimpleRequestor(
-                    ApiCodeCheck(item?.promoCode || '', {
-                        headers: {
-                            Authorization: `Bearer ${token}`,
-                        },
-                    }),
-                );
-
-                return {
-                    item,
-                    response,
-                };
+            const response = await fetch('api/code', {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(contents),
             });
-            const res = await Promise.all(promiseArr);
+            const res = await response.json();
             setResponseData(res);
-            console.log('KhiemTQ: handleSubmit -> res', res);
         } finally {
             setIsFetching(false);
         }
