@@ -3,34 +3,30 @@ import { ApiCodeCheck } from '@/services/check-code.api';
 import { arrayNotEmpty } from '@/utils/common.util';
 
 export default async function handler(req: any, res: any) {
-    const { method, headers, body } = req;
+    const { headers, body } = req;
 
-    if (method === 'POST') {
-        const token = headers.authorization?.split(' ')[1];
-        const contents = JSON.parse(body);
+    const token = headers.authorization?.split(' ')[1];
+    const contents = JSON.parse(body);
 
-        if (!token || !arrayNotEmpty(contents)) return;
+    if (!token || !arrayNotEmpty(contents)) return;
 
-        const promiseArr = contents.map(async (item) => {
-            const api = ApiCodeCheck(item?.promoCode || '');
-            const response = await fetch(api.url, {
-                method: 'get',
+    const promiseArr = contents.map(async (item) => {
+        const api = ApiCodeCheck(item?.promoCode || '');
+        const response = await fetch(api.url, {
+            method: 'get',
 
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Accept: 'application/json',
-                },
-            });
-
-            return {
-                item,
-                response: await response.json(),
-            };
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json',
+            },
         });
-        const ress = await Promise.all(promiseArr);
 
-        res.status(200).json(ress);
-    }
+        return {
+            item,
+            response: await response.json(),
+        };
+    });
+    const ress = await Promise.all(promiseArr);
 
-    res.status(200).json({ success: true });
+    res.status(200).json(ress);
 }
