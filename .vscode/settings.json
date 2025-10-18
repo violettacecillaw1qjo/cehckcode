@@ -1,0 +1,42 @@
+{
+    "[svg]": {
+        "editor.defaultFormatter": "jock.svg"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "jock.svg"
+    },
+    "editor.codeActionsOnSave": [
+        "source.fixAll.eslint",
+        "source.organizeImports"
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+        120
+    ],
+    "editor.tabSize": 4,
+    "postcssSorting.config": {
+        "order": [
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            "at-rules",
+            "rules"
+        ],
+        "properties-order": [
+            "display",
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left"
+        ]
+    },
+    "sort-json.settings.objectSortType": "Key",
+    "sort-json.settings.sortMode": "Objects Only",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "cSpell.words": [
+        "Appt"
+    ]
+}

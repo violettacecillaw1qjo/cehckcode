@@ -1,0 +1,14 @@
+.wrapper {
+    @apply gap-4;
+}
+.wrapper > div {
+    gap: 40px;
+    row-gap: 24px;
+    min-height: 24px;
+}
+.wrapper > div > label {
+    padding: 0;
+}
+.wrapper > div > label:first-child {
+    margin-left: 0px;
+}

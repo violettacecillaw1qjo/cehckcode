@@ -1,0 +1,30 @@
+export enum SocketEvent {
+    BookingAdd = 'BOOKING_ADD',
+    BookingStatusChange = 'BOOKING_STATUS_CHANGE',
+    BookingDetailChange = 'BOOKING_DETAIL_CHANGE',
+    BookingTrackDurationChange = 'BOOKING_TRACK_DURATION_CHANGE',
+    ClassifyServiceAdd = 'CLASSIFY_SERVICE_ADD',
+    ClassifyServiceUpdate = 'CLASSIFY_SERVICE_UPDATE',
+    ClassifyServiceDelete = 'CLASSIFY_SERVICE_DELETE',
+    ClassifyProductAdd = 'CLASSIFY_PRODUCT_ADD',
+    ClassifyProductUpdate = 'CLASSIFY_PRODUCT_UPDATE',
+    ClassifyProductDelete = 'CLASSIFY_PRODUCT_DELETE',
+    ClassifyLevelAdd = 'CLASSIFY_LEVEL_ADD',
+    ClassifyLevelUpdate = 'CLASSIFY_LEVEL_UPDATE',
+    ClassifyLevelDelete = 'CLASSIFY_LEVEL_DELETE',
+    ClassifyGroupAdd = 'CLASSIFY_GROUP_ADD',
+    ClassifyGroupUpdate = 'CLASSIFY_GROUP_UPDATE',
+    ClassifyGroupDelete = 'CLASSIFY_GROUP_DELETE',
+    ProductAdd = 'PRODUCT_ADD',
+    ProductUpdate = 'PRODUCT_UPDATE',
+    ProductDelete = 'PRODUCT_DELETE',
+    ServiceAdd = 'SERVICE_ADD',
+    ServiceUpdate = 'SERVICE_UPDATE',
+    EmployeeAdd = 'EMPLOYEE_ADD',
+    EmployeeUpdate = 'EMPLOYEE_UPDATE',
+    EmployeeDelete = 'EMPLOYEE_DELETE',
+}
+
+export enum SocketCallback {
+    PosCenter = 'posCenter',
+}

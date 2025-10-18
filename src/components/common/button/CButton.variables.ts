@@ -1,0 +1,71 @@
+import { BtnColor, BtnSize, BtnVariant } from './CButton.type';
+
+export const BtnColorClasses: any = {
+    [BtnColor.Primary]: {
+        [BtnVariant.Bordered]: `border-1 border-primary data-[hover=true]:bg-primary/10`,
+        [BtnVariant.Faded]: `border-1 bg-primary/2 text-primary border-primary/10`,
+        [BtnVariant.Flat]: `text-primary bg-primary/10`,
+        [BtnVariant.Ghost]: `text-primary border-primary border-1 data-[hover=true]:bg-primary data-[hover=true]:text-white`,
+        [BtnVariant.Light]: 'text-primary data-[hover=true]:bg-primary/10',
+        [BtnVariant.Solid]: 'bg-primary text-white',
+        [BtnVariant.Shadow]: 'bg-primary text-white shadow-lg shadow-primary/40',
+    },
+    [BtnColor.Info]: {
+        [BtnVariant.Bordered]: `border-1 border-info text-info data-[hover=true]:bg-info/10`,
+        [BtnVariant.Faded]: `border-1 bg-info/10 text-info border-info/20`,
+        [BtnVariant.Flat]: `text-info bg-info/10`,
+        [BtnVariant.Ghost]: `text-info border-info border-1 data-[hover=true]:bg-info data-[hover=true]:text-white`,
+        [BtnVariant.Light]: 'text-info data-[hover=true]:bg-info/10',
+        [BtnVariant.Solid]: 'bg-info text-white',
+        [BtnVariant.Shadow]: 'bg-info text-white shadow-lg shadow-info/40',
+    },
+    [BtnColor.Success]: {
+        [BtnVariant.Bordered]: `border-1 hover:!bg-success/10 text-success data-[hover=true]:bg-success/10`,
+        [BtnVariant.Faded]: `border-1 bg-success/10 text-success border-success/20`,
+        [BtnVariant.Flat]: `text-success bg-success/10`,
+        [BtnVariant.Ghost]: `text-success border-success border-1 data-[hover=true]:bg-success data-[hover=true]:!text-white`,
+        [BtnVariant.Light]: 'text-success data-[hover=true]:bg-success/10',
+        [BtnVariant.Solid]: 'bg-success text-white',
+        [BtnVariant.Shadow]: 'bg-success text-white shadow-lg shadow-success/40',
+    },
+    [BtnColor.Warning]: {
+        [BtnVariant.Bordered]: `border-1 hover:!bg-warning/10 text-warning data-[hover=true]:bg-warning/10`,
+        [BtnVariant.Faded]: `border-1 bg-warning/10 text-warning border-warning/20`,
+        [BtnVariant.Flat]: `text-warning bg-warning/10`,
+        [BtnVariant.Ghost]: `text-warning border-warning border-1 data-[hover=true]:bg-warning data-[hover=true]:!text-white`,
+        [BtnVariant.Light]: 'text-warning data-[hover=true]:bg-warning/10',
+        [BtnVariant.Solid]: 'bg-warning text-white',
+        [BtnVariant.Shadow]: 'bg-warning text-white shadow-lg shadow-warning/40',
+    },
+    [BtnColor.Danger]: {
+        [BtnVariant.Bordered]: `border-1 hover:!bg-danger/10 text-danger data-[hover=true]:bg-danger/10`,
+        [BtnVariant.Faded]: `border-1 bg-danger/10 text-danger border-danger/20`,
+        [BtnVariant.Flat]: `text-danger bg-danger/10`,
+        [BtnVariant.Ghost]: `text-danger border-danger border-1 data-[hover=true]:bg-danger data-[hover=true]:text-white`,
+        [BtnVariant.Light]: 'text-danger data-[hover=true]:bg-danger/10',
+        [BtnVariant.Solid]: 'bg-danger text-white',
+        [BtnVariant.Shadow]: 'bg-danger text-white shadow-lg shadow-danger/40',
+    },
+    [BtnColor.Yellow]: {
+        [BtnVariant.Bordered]: `border-1 hover:!bg-yellow/10 text-yellow data-[hover=true]:bg-yellow/10`,
+        [BtnVariant.Faded]: `border-1 bg-yellow/10 text-yellow border-yellow/20`,
+        [BtnVariant.Flat]: `text-yellow bg-yellow/10`,
+        [BtnVariant.Ghost]: `text-yellow border-yellow border-1 data-[hover=true]:bg-yellow data-[hover=true]:text-white`,
+        [BtnVariant.Light]: 'text-yellow data-[hover=true]:bg-yellow/10',
+        [BtnVariant.Solid]: 'bg-yellow text-white',
+        [BtnVariant.Shadow]: 'bg-yellow text-white shadow-lg shadow-yellow/40',
+    },
+};
+
+export const BtnSizeClasses: Record<BtnSize, string> = {
+    [BtnSize.Mini]: 'px-2 py-2 min-h-[28px] max-h-[28px] rounded-lg',
+    [BtnSize.MiniRound]: 'px-0 py-0 min-h-[28px] max-h-[28px] min-w-[28px] max-w-[28px] rounded-lg',
+    [BtnSize.Small]: 'px-3 py-0 min-h-[32px] max-h-[32px] rounded-medium',
+    [BtnSize.SmallRound]: 'px-0 py-0 min-h-[32px] max-h-[32px] min-w-[32px] max-w-[32px] rounded-small',
+    [BtnSize.Medium]: 'px-4 py-0 min-h-[36px] max-h-[36px] rounded-medium',
+    [BtnSize.MediumRound]: 'px-0 py-0 min-h-[36px] max-h-[36px] min-w-[36px] max-w-[36px] rounded-medium',
+    [BtnSize.Large]: 'text-medium px-4 py-0 min-h-[40px] max-h-[40px] rounded-medium font-black',
+    [BtnSize.LargeRound]: 'px-0 py-0 min-h-[40px] max-h-[40px] min-w-[40px] max-w-[40px] rounded-medium',
+    [BtnSize.Extra]: 'text-medium px-4 py-0 min-h-[48px] max-h-[48px] rounded-medium font-black',
+    [BtnSize.ExtraCircle]: 'px-0 py-0 min-h-[48px] max-h-[48px] min-w-[48px] max-w-[48px] rounded-full',
+};

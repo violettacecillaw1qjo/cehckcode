@@ -1,0 +1,21 @@
+import { IconSvgProps } from '@/types/index.type';
+
+const IconCircledThin = ({ size = 20, width, height, ...props }: IconSvgProps) => {
+    return (
+        <svg
+            viewBox='0 0 48 48'
+            width={size || width}
+            height={size || height}
+            role={'presentation'}
+            aria-hidden={true}
+            focusable={false}
+            {...props}
+        >
+            <path
+                d='M 24 4 C 12.972066 4 4 12.972074 4 24 C 4 35.027926 12.972066 44 24 44 C 35.027934 44 44 35.027926 44 24 C 44 12.972074 35.027934 4 24 4 z M 24 7 C 33.406615 7 41 14.593391 41 24 C 41 33.406609 33.406615 41 24 41 C 14.593385 41 7 33.406609 7 24 C 7 14.593391 14.593385 7 24 7 z'
+                fill='currentColor'
+            />
+        </svg>
+    );
+};
+export default IconCircledThin;

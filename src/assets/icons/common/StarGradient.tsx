@@ -1,0 +1,40 @@
+import { IconSvgProps } from '@/types/index.type';
+
+const IconStarGradient = ({ size = 20, width, height, ...props }: IconSvgProps) => {
+    return (
+        <svg
+            viewBox='0 0 48 48'
+            width={size || width}
+            height={size || height}
+            role={'presentation'}
+            aria-hidden={true}
+            focusable={false}
+            {...props}
+        >
+            <defs>
+                <linearGradient
+                    id='gradientColor'
+                    x1='0%'
+                    y1='0%'
+                    x2='0%'
+                    y2='100%'
+                >
+                    <stop
+                        offset='0%'
+                        stopColor='#f7b731'
+                    />
+                    <stop
+                        offset='100%'
+                        stopColor='#fa7d00'
+                    />
+                </linearGradient>
+            </defs>
+            <path
+                fill='url(#gradientColor)'
+                d='M 24.009766 5 A 1.50015 1.50015 0 0 0 22.658203 5.8300781 L 17.505859 16.134766 L 5.2714844 18.017578 A 1.50015 1.50015 0 0 0 4.4394531 20.560547 L 12.902344 29.023438 L 11.017578 41.271484 A 1.50015 1.50015 0 0 0 13.193359 42.830078 L 24 37.191406 L 34.806641 42.830078 A 1.50015 1.50015 0 0 0 36.982422 41.271484 L 35.097656 29.023438 L 43.560547 20.560547 A 1.50015 1.50015 0 0 0 42.728516 18.017578 L 30.494141 16.134766 L 25.341797 5.8300781 A 1.50015 1.50015 0 0 0 24.009766 5 z'
+            />
+        </svg>
+    );
+};
+
+export default IconStarGradient;

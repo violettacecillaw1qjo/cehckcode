@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    @apply text-small text-primary;
+    @apply overflow-hidden;
+}
+
+body > div {
+    @apply h-full;
+}
+
+[data-overlay-container='true'] {
+    @apply h-full w-full;
+}
+
+html {
+    @apply overflow-hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+b {
+    @apply font-bold;
+    @apply subpixel-antialiased;
+}
+
+:root {
+    --scrollbar-w: 6px;
+    --scrollbar-h: 8px;
+    /* --sbt-bgc: theme('colors.primary.32');
+    --sbt-hover: theme('colors.primary.DEFAULT'); */
+}
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-w);
+    height: var(--scrollbar-h);
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--sbt-bgc);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sbt-hover);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+.scrollbar-primary {
+    --sbt-bgc: #090f191a;
+    --sbt-hover: #090f19;
+    @apply cursor-pointer;
+}
+
+.scrollbar-white {
+    --sbt-bgc: #ffffff29;
+    --sbt-hover: #fff;
+}
+
+@-moz-document url-prefix() {
+    [class*='overflow'],
+    textarea {
+        scrollbar-width: thin;
+    }
+}
+
+/* END: customize scrollbar */
+
+.absolute-all {
+    position: absolute;
+    inset: 0;
+}

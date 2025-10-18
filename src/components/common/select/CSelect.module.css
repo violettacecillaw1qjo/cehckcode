@@ -1,0 +1,15 @@
+.wrapper {
+    width: 100%;
+}
+.wrapper [data-slot='input-wrapper'] {
+    @apply h-[40px] rounded-xl border-1 border-primary/10 bg-primary/2 px-4 shadow-none;
+    @apply focus-within:border-primary/10 focus-within:bg-primary/10 hover:!bg-primary/10;
+    @apply !ring-0 !ring-offset-0;
+}
+.error [data-slot='input-wrapper'] {
+    @apply border-danger/10 !bg-danger/10 focus-within:border-danger hover:!bg-danger/10;
+}
+
+.wrapper label {
+    @apply font-bold;
+}

@@ -1,0 +1,19 @@
+.wrapper {
+    width: 100%;
+}
+.wrapper [data-slot='input-wrapper'] {
+    @apply h-[40px] rounded-xl border-1 border-primary/10 bg-primary/2 px-4 shadow-none;
+    @apply focus-within:border-primary/10 focus-within:bg-primary/10 hover:!bg-primary/10;
+}
+.wrapper [data-slot='label'] {
+    @apply font-bold;
+    @apply text-inherit;
+}
+
+.error [data-slot='input-wrapper'] {
+    @apply border-danger/10 !bg-danger/10 focus-within:border-danger hover:!bg-danger/10;
+}
+
+.error [data-slot='label'] {
+    @apply text-danger;
+}
